@@ -3,7 +3,7 @@
 
 ## Getting Started
 
-The below instructions will get you an idea about how to run the cypress UI tests.
+The below instructions will get you an idea about the cypress UI tests.
 
 ### Prerequisites
 
@@ -27,6 +27,7 @@ note: Run commands are written under scripts section in package.json file
 2) Open a CLI example ... navigate to windows > Run > type cmd   
 3) From the command prompt cd to the folder directory, assume if the project is cloned to the following location C:\Work\intelli\intelliHR
    then cd C:\Work\intelli\intelliHR
+   
 4) Now type npm run cy:test-intelliHR from the CLI prompt to run in headless mode.
 5) Cypress successfully starts running the tests in headless mode.
 
@@ -41,7 +42,7 @@ Cypress test runner will open successfully. Now you can click on spec files to r
 ```
  
 
-### Break down into end to end tests into four spec files:
+### Break down the end to end tests into four spec files:
 
 ```
 1. addCurrency.spec.js
@@ -69,8 +70,8 @@ Cypress test runner will open successfully. Now you can click on spec files to r
 		$ npm run cy:test-intelliHR 
 		$ npm run cy:open-intelliHR 
 
-6. Video will be created  and available under cypress/videos folder for every cypress run. Vidoes will not be created while running 
-   using cypress open command / running from test runner
+6. Video will be created  and available under cypress/videos folder for every cypress run. 
+   Vidoes will not be created while running using cypress open command / running from test runner
 
 ```
 
@@ -81,6 +82,6 @@ Cypress test runner will open successfully. Now you can click on spec files to r
 
 ## Note
 
-* For the time being not integrated the tests run to cypress dashboard.
+* For the time being cypress test run are not integrated into cypress dashboard.
 
 
