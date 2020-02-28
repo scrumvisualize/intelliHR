@@ -28,7 +28,7 @@ note: Cypress run commands are written under scripts section in package.json fil
 3) From the command prompt 'cd' to the folder directory, assume if the project is cloned to the following location C:\Work\intelli\intelliHR
    then cd C:\Work\intelli\intelliHR
    
-4) Now type  ` npm run cy:test-intelliHR ` from the CLI prompt to run in headless mode.
+4) Now type npm run cy:test-intelliHR in the command prompt to run in headless mode.
 5) Cypress successfully starts running the tests in headless mode.
 
 Now if the user need to open the Cypress test runner, follow the below command:
