@@ -57,7 +57,7 @@ describe('Add Crypto currency transaction', function () {
         cy.visit('/');
         cy.get('#react-select-2-input').click({force:true});
         cy.get('.css-10nd86i > div > div > div > div > div').contains("Bitcoin").click();
-        cy.get('input[name="units"]').type(Cypress.env('units'));
+        cy.get('input[name="units"]').type(c_units);
         cy.get('button[type="submit"]').contains("Record").click();
         cy.get('.TransactionForm_messages__2eGDD > div').should('contain', "Enter the purchase price");
     })
