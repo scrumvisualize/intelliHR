@@ -3,9 +3,9 @@
 
 ## Getting Started
 
-The below instructions will get you an idea about the cypress UI tests.
+Cypress is an End to End UI testing tool.The below instructions will get you start working with this cypress UI tests.
 
-### Prerequisites
+### Prerequisites:
 
 What software/ tools you need to install and their versions
 
@@ -31,13 +31,11 @@ note: Cypress run commands are written under scripts section in package.json fil
 4) Now type  ` npm run cy:test-intelliHR ` from the CLI prompt to run in headless mode.
 5) Cypress successfully starts running the tests in headless mode.
 
-
 Now if the user need to open the Cypress test runner, follow the below command:
 
 From the command prompt 
  >> Type  npm run cy:open-intelliHR 
-Cypress test runner will open successfully. Now you can click on spec files to run the tests.
-
+ >> Cypress test runner will open successfully. Now you can click on spec files to run the tests.
 
 ```
  
