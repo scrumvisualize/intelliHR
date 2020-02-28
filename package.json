@@ -1,5 +1,5 @@
 {
-  "name": "intelliHR",
+  "name": "intellihr",
   "version": "1.0.0",
   "description": "Cypress UI tests for intelliHR",
   "main": "index.js",

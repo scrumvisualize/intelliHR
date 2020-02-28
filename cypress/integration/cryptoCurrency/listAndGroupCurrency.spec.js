@@ -20,6 +20,7 @@ describe('Listing and Grouping of Crypto currency transaction', function () {
     })
 
     it('Verify the Listing of Crypto currency', function () {
+        Cypress.currentTest.retries(1);
         cy.viewport(1600, 1000);
         cy.addMultipleCurrency();
         cy.get('.CurrencyList_container__i4zq3 > a > div').then(($div) => {
@@ -34,12 +35,14 @@ describe('Listing and Grouping of Crypto currency transaction', function () {
     })
 
     it('Verify the grouping of Crypto currency', function () {
+        Cypress.currentTest.retries(1);
         cy.viewport(1600, 1000);
         cy.addGroupTransaction();
         cy.groupTransaction().should('contain', '3');
     })
 
     it('Verify the display of Total money spend in AUD after the transactions', function () {
+        Cypress.currentTest.retries(1);
         cy.viewport(1600, 1000);
         cy.addGroupTransaction();
         cy.get('.Dashboard_container__3CqYQ > div > div > div').eq(1).invoke('text').then((text) => {

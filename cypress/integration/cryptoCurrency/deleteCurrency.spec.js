@@ -19,6 +19,7 @@ describe('Delete a Crypto currency transaction', function () {
   })
 
   it('Verify the deleting of crypto transaction record', function () {
+    Cypress.currentTest.retries(1);
     cy.addTransaction();
     cy.get('button[type="submit"]').contains("Record").click();
     cy.get('.CurrencyList_container__i4zq3 > a').click();

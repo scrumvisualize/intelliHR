@@ -19,16 +19,16 @@ Install npm i for installing all the dependencies mentioned in package.json
 ### Instructions:
 
 A step by step process that tell you how to run the Cypress. 
-note: Run commands are written under scripts section in package.json file 
+note: Cypress run commands are written under scripts section in package.json file 
 
 ```
 
 1) Clone the github repo [ https://github.com/scrumvisualize/intelliHR.git ] to some location drive, example C:\Work\intelli
-2) Open a CLI example ... navigate to windows > Run > type cmd   
-3) From the command prompt cd to the folder directory, assume if the project is cloned to the following location C:\Work\intelli\intelliHR
+2) Navigate to windows > Run > type cmd, open the CLI prompt
+3) From the command prompt 'cd' to the folder directory, assume if the project is cloned to the following location C:\Work\intelli\intelliHR
    then cd C:\Work\intelli\intelliHR
    
-4) Now type npm run cy:test-intelliHR from the CLI prompt to run in headless mode.
+4) Now type  ` npm run cy:test-intelliHR ` from the CLI prompt to run in headless mode.
 5) Cypress successfully starts running the tests in headless mode.
 
 
@@ -57,21 +57,23 @@ Cypress test runner will open successfully. Now you can click on spec files to r
 
 2) baseUrl is configured in cypress.json file.
 
-3) parameters are reading from Cypress.env file like units, price etc
+3) Parameters are reading from Cypress.env file, like units, price etc
 
 4) App actions are written in 'commands.js' file, sits under cypress/support/ folder
 
-5) Run commands are written in package.json > under scripts section 
+5) Added the require('cypress-plugin-retries') in the index.js file sits under cypress/support.
 
-    cy:open-intelliHR  -- this will open the cypress test runner
-	cy:test-intelliHR  -- this will run cypress in headless mode.
+5) Cypress Run commands are written in package.json > under scripts section 
 
-	You need to run the command as below from command prompt
+    cy:open-intelliHR  -->> this command will open the cypress test runner
+	cy:test-intelliHR  -->> this command will run cypress in headless mode.
+
+ b) You need to run the command as below from command prompt:
 		$ npm run cy:test-intelliHR 
 		$ npm run cy:open-intelliHR 
 
-6. Video will be created  and available under cypress/videos folder for every cypress run. 
-   Vidoes will not be created while running using cypress open command / running from test runner
+6. Videos will be created and available under cypress/videos folder for every 'cypress run'. 
+   But cypress will not create videos while running using 'cypress open' command, ie running from test runner
 
 ```
 
@@ -82,6 +84,6 @@ Cypress test runner will open successfully. Now you can click on spec files to r
 
 ## Note
 
-* For the time being cypress test run are not integrated into cypress dashboard.
-
+* For the time being cypress test run are not integrated into cypress dashboard. As it need a valid login email to cypress dashboard. 
+* Once we have that email we can set it up.
 

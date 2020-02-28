@@ -23,6 +23,7 @@ describe('Add Crypto currency transaction', function () {
     })
 
     it('Check the adding/saving of crypto currency transaction record ', function () {
+        Cypress.currentTest.retries(1);
         cy.addTransaction();
         cy.get('.TransactionForm_messages__2eGDD > div').invoke('text').then((text) => {
             const unitPrice = text;
@@ -39,6 +40,7 @@ describe('Add Crypto currency transaction', function () {
     })
 
     it('Verify the number of units purchased and total price paid for the crypto transaction', function () {
+        Cypress.currentTest.retries(1);
         cy.addTransaction();
         cy.get('button[type="submit"]').contains("Record").click();
         cy.get('.CurrencyList_container__i4zq3 > a > div > div > div ').invoke('text').then((text) => {
@@ -48,6 +50,16 @@ describe('Add Crypto currency transaction', function () {
         })
         cy.unitsPurchased().should('contain', '5');
         cy.totalPrice().should('contain', '$2500 AUD');
+    })
+
+    it('Check whether the validation is happening without filling the Price', function () {
+        Cypress.currentTest.retries(1);
+        cy.visit('/');
+        cy.get('#react-select-2-input').click({force:true});
+        cy.get('.css-10nd86i > div > div > div > div > div').contains("Bitcoin").click();
+        cy.get('input[name="units"]').type(Cypress.env('units'));
+        cy.get('button[type="submit"]').contains("Record").click();
+        cy.get('.TransactionForm_messages__2eGDD > div').should('contain', "Enter the purchase price");
     })
 
 });

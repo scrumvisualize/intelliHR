@@ -19,6 +19,7 @@ describe('Edit Crypto currency transaction', function () {
     })
 
     it('Verify the editting of Crypto transaction record', function () {
+        Cypress.currentTest.retries(1);
         cy.addTransaction();
         cy.get('button[type="submit"]').contains("Record").click();
         cy.get('.CurrencyList_container__i4zq3 > a').click();
