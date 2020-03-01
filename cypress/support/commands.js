@@ -31,8 +31,8 @@ Cypress.Commands.add('addTransaction', () => {
  cy.visit('/');
  cy.get('#react-select-2-input').click({force:true});
  cy.get('.css-10nd86i > div > div > div > div > div').contains("Ethereum").click();
- cy.get('input[name="units"]').type(Cypress.env('units'));
- cy.get('input[name="price"]').type(Cypress.env('price'));
+ cy.get('input[name="units"]').type(5);
+ cy.get('input[name="price"]').type(2500);
 })
 
 Cypress.Commands.add('groupTransaction', () => {
@@ -54,8 +54,8 @@ Cypress.Commands.add('backToDashboard', () => {
 
 Cypress.Commands.add('editTransaction', () => {
 cy.get('.TransactionList_controls__-Ag85 > div > div > svg').eq(0).click();
-cy.get('input[name="units"]').clear().type(Cypress.env('modifiedUnits'));
-cy.get('input[name="price"]').clear().type(Cypress.env('modifiedPrice'));
+cy.get('input[name="units"]').clear().type(10);
+cy.get('input[name="price"]').clear().type(3500);
 cy.get('button[type="submit"]').contains("Save").click();
 })
 
@@ -69,33 +69,33 @@ Cypress.Commands.add('addMultipleCurrency', () => {
     cy.visit('/');
     cy.get('#react-select-2-input').click({force:true});
     cy.get('.css-10nd86i > div > div > div > div > div').contains("Ethereum").click();
-    cy.get('input[name="units"]').type(Cypress.env('units'));
-    cy.get('input[name="price"]').type(Cypress.env('price'));
+    cy.get('input[name="units"]').type(5);
+    cy.get('input[name="price"]').type(2500);
     cy.get('button[type="submit"]').contains("Record").click();
     cy.get('#react-select-2-input').click({force:true});
     cy.get('.css-10nd86i > div > div > div > div > div').contains("Bitcoin").click();
-    cy.get('input[name="units"]').type(Cypress.env('units'));
-    cy.get('input[name="price"]').type(Cypress.env('price'));
+    cy.get('input[name="units"]').type(5);
+    cy.get('input[name="price"]').type(2500);
     cy.get('button[type="submit"]').contains("Record").click();
     cy.get('#react-select-2-input').click({force:true});
     cy.get('.css-10nd86i > div > div > div > div > div').contains("Litecoin").click();
-    cy.get('input[name="units"]').type(Cypress.env('units'));
-    cy.get('input[name="price"]').type(Cypress.env('price'));
+    cy.get('input[name="units"]').type(5);
+    cy.get('input[name="price"]').type(2500);
     cy.get('button[type="submit"]').contains("Record").click();
     cy.get('#react-select-2-input').click({force:true});
     cy.get('.css-10nd86i > div > div > div > div > div').contains("XRP").click();
-    cy.get('input[name="units"]').type(Cypress.env('units'));
-    cy.get('input[name="price"]').type(Cypress.env('price'));
+    cy.get('input[name="units"]').type(5);
+    cy.get('input[name="price"]').type(2500);
     cy.get('button[type="submit"]').contains("Record").click();
     cy.get('#react-select-2-input').click({force:true});
     cy.get('.css-10nd86i > div > div > div > div > div').contains("Bitcoin").click();
-    cy.get('input[name="units"]').type('10');
-    cy.get('input[name="price"]').type('250');
+    cy.get('input[name="units"]').type(10);
+    cy.get('input[name="price"]').type(250);
     cy.get('button[type="submit"]').contains("Record").click();
     cy.get('#react-select-2-input').click({force:true});
     cy.get('.css-10nd86i > div > div > div > div > div').contains("Ethereum").click();
-    cy.get('input[name="units"]').type('15');
-    cy.get('input[name="price"]').type('500');
+    cy.get('input[name="units"]').type(15);
+    cy.get('input[name="price"]').type(500);
     cy.get('button[type="submit"]').contains("Record").click();
    })
 
@@ -104,28 +104,28 @@ Cypress.Commands.add('addMultipleCurrency', () => {
     cy.visit('/');
     cy.get('#react-select-2-input').click({force:true});
     cy.get('.css-10nd86i > div > div > div > div > div').contains("Ethereum").click();
-    cy.get('input[name="units"]').type(Cypress.env('units'));
-    cy.get('input[name="price"]').type(Cypress.env('price'));
+    cy.get('input[name="units"]').type(5);
+    cy.get('input[name="price"]').type(2500);
     cy.get('button[type="submit"]').contains("Record").click();
     cy.get('#react-select-2-input').click({force:true});
     cy.get('.css-10nd86i > div > div > div > div > div').contains("Bitcoin").click();
-    cy.get('input[name="units"]').type(Cypress.env('units'));
-    cy.get('input[name="price"]').type(Cypress.env('price'));
+    cy.get('input[name="units"]').type(5);
+    cy.get('input[name="price"]').type(2500);
     cy.get('button[type="submit"]').contains("Record").click();
     cy.get('#react-select-2-input').click({force:true});
     cy.get('.css-10nd86i > div > div > div > div > div').contains("Bitcoin").click();
-    cy.get('input[name="units"]').type('10');
-    cy.get('input[name="price"]').type('250');
+    cy.get('input[name="units"]').type(10);
+    cy.get('input[name="price"]').type(250);
     cy.get('button[type="submit"]').contains("Record").click();
     cy.get('#react-select-2-input').click({force:true});
     cy.get('.css-10nd86i > div > div > div > div > div').contains("Ethereum").click();
-    cy.get('input[name="units"]').type('15');
-    cy.get('input[name="price"]').type('500');
+    cy.get('input[name="units"]').type(15);
+    cy.get('input[name="price"]').type(500);
     cy.get('button[type="submit"]').contains("Record").click();
     cy.get('#react-select-2-input').click({force:true});
     cy.get('.css-10nd86i > div > div > div > div > div').contains("Ethereum").click();
-    cy.get('input[name="units"]').type('15');
-    cy.get('input[name="price"]').type('500');
+    cy.get('input[name="units"]').type(15);
+    cy.get('input[name="price"]').type(500);
     cy.get('button[type="submit"]').contains("Record").click();
    })
 

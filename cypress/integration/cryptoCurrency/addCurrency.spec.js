@@ -11,8 +11,7 @@ Running on test runner: Chrome 80 and Electron 78
 ===========================================*/
 
 
-const c_units = Cypress.env('units');
-const c_price = Cypress.env('price');
+const c_units = 5;
 
 /*To add Crypto currency */
 
